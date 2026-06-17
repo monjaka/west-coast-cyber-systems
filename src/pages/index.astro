@@ -1,0 +1,301 @@
+---
+import '../styles/global.css';
+
+const siteUrl = 'https://westcoastcybersystems.com.au';
+const heroImage = '/images/west-coast-cyber-systems-perth-hero.webp';
+const fallbackHero = '/images/west-coast-cyber-systems-perth-hero.jpg';
+const contactEmail = 'admin@westcoastcybersystem.com.au';
+const contactPhone = '0494630552';
+const contactPhoneHref = '+61494630552';
+const facebookUrl = 'https://www.facebook.com/Westcoastcybersystems';
+const title = 'West Coast Cyber Systems | AI Cyber Security Services Perth';
+const description =
+  'Perth cyber security consultancy helping Western Australian businesses implement AI-ready security, secure cloud, identity protection, compliance and resilience.';
+
+const services = [
+  {
+    name: 'AI-Safe Automation',
+    text: 'Design practical AI workflows with access controls, audit trails, data boundaries and security reviews built in from day one.'
+  },
+  {
+    name: 'Cloud And Identity Security',
+    text: 'Harden Microsoft 365, Google Workspace, cloud platforms, MFA, device posture and privileged access for modern teams.'
+  },
+  {
+    name: 'Cyber Security Reviews',
+    text: 'Assess current systems, accounts, suppliers, controls and risk exposure, then turn the findings into a clear implementation plan.'
+  },
+  {
+    name: 'Incident Readiness',
+    text: 'Prepare playbooks, backups, logging, tabletop exercises and recovery paths before a real incident tests the business.'
+  },
+  {
+    name: 'Governance And Compliance',
+    text: 'Turn frameworks, insurance questions and board reporting into lightweight systems people can actually maintain.'
+  },
+  {
+    name: 'Infrastructure Resilience',
+    text: 'Review networks, endpoints, SaaS, backups and remote access so critical operations can keep moving under pressure.'
+  }
+];
+
+const sectors = [
+  'Mining and resources suppliers',
+  'Construction and trades',
+  'Professional services',
+  'Health and community providers',
+  'Manufacturing and logistics',
+  'Growing technology teams'
+];
+
+const process = [
+  {
+    step: 'See',
+    title: 'Understand the business first',
+    text: 'Map the systems, accounts, suppliers, data paths and workflows that matter most.'
+  },
+  {
+    step: 'Fix',
+    title: 'Close the highest-value gaps',
+    text: 'Prioritise identity, cloud, endpoint, backup, network and process controls that reduce real exposure.'
+  },
+  {
+    step: 'Build',
+    title: 'Implement practical security systems',
+    text: 'Put the right protections, workflows and AI-safe automations in place without overcomplicating the business.'
+  },
+  {
+    step: 'Grow',
+    title: 'Improve as the business changes',
+    text: 'Review, tune and extend the security program as people, tools, suppliers and AI use cases evolve.'
+  }
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'West Coast Cyber Systems',
+  url: siteUrl,
+  image: `${siteUrl}${heroImage}`,
+  description,
+  email: contactEmail,
+  telephone: contactPhoneHref,
+  sameAs: [facebookUrl],
+  areaServed: [
+    {
+      '@type': 'City',
+      name: 'Perth'
+    },
+    {
+      '@type': 'State',
+      name: 'Western Australia'
+    }
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Perth',
+    addressRegion: 'WA',
+    addressCountry: 'AU'
+  },
+  serviceType: [
+    'Cyber security consulting',
+    'AI security systems',
+    'Cloud security',
+    'Identity security',
+    'Incident readiness',
+    'Cyber governance'
+  ]
+};
+---
+
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={siteUrl} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#071015" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:site_name" content="West Coast Cyber Systems" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:image" content={`${siteUrl}${fallbackHero}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}${fallbackHero}`} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="/" aria-label="West Coast Cyber Systems home">
+        <span class="brand-mark">WC</span>
+        <span class="brand-text">
+          <span>West Coast</span>
+          <span>Cyber Systems</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#perth">Perth</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-action" href="#contact">Start</a>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <picture class="hero-media">
+          <source srcset={heroImage} type="image/webp" />
+          <img
+            src={fallbackHero}
+            alt="Perth skyline with secure digital infrastructure and AI network overlays"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </picture>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <p class="eyebrow">Perth, Western Australia</p>
+          <h1 id="hero-title">West Coast Cyber Systems</h1>
+          <p class="hero-copy">
+            AI-assisted cyber security systems for businesses that need secure cloud, trusted identity,
+            clear governance and practical resilience without enterprise theatre.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="#contact">Plan a cyber systems review</a>
+            <a class="button button-secondary" href="#services">Explore services</a>
+          </div>
+          <dl class="proof-strip" aria-label="Service focus">
+            <div>
+              <dt>Local</dt>
+              <dd>Perth and WA focus</dd>
+            </div>
+            <div>
+              <dt>AI</dt>
+              <dd>Secure automation</dd>
+            </div>
+            <div>
+              <dt>Systems</dt>
+              <dd>Built to operate</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="intro section-band" aria-labelledby="intro-title">
+        <div class="section-grid">
+          <div>
+            <p class="section-kicker">Cyber security for operators</p>
+            <h2 id="intro-title">Build security into the way the business actually runs.</h2>
+          </div>
+          <div class="intro-copy">
+            <p>
+              West Coast Cyber Systems helps Perth businesses move from scattered tools and one-off fixes
+              to cyber systems that can be monitored, improved and explained.
+            </p>
+            <p>
+              The focus is practical: protect identity, secure cloud platforms, make AI adoption safer,
+              and give leaders a clear path for reducing risk without slowing useful work down.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services" aria-labelledby="services-title">
+        <div class="section-heading">
+          <p class="section-kicker">Services</p>
+          <h2 id="services-title">Cyber systems for Perth businesses adopting AI.</h2>
+          <p>
+            Security consulting, implementation and support foundations for organisations that need
+            strong controls without slowing the business down.
+          </p>
+        </div>
+        <div class="service-grid">
+          {
+            services.map((service) => (
+              <article class="service-card">
+                <h3>{service.name}</h3>
+                <p>{service.text}</p>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="section split-section" id="approach" aria-labelledby="approach-title">
+        <div class="section-heading narrow">
+          <p class="section-kicker">Approach</p>
+          <h2 id="approach-title">A clear implementation path, not a tool wishlist.</h2>
+          <p>
+            Tools matter, but customers need outcomes first: safer access, stronger cloud controls,
+            better resilience and a plan that makes sense to the people running the business.
+          </p>
+        </div>
+        <div class="process-list">
+          {
+            process.map((item) => (
+              <article class="process-item">
+                <span>{item.step}</span>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="section perth-section" id="perth" aria-labelledby="perth-title">
+        <div class="perth-panel">
+          <p class="section-kicker">Perth focus</p>
+          <h2 id="perth-title">Built for Western Australian business conditions.</h2>
+          <p>
+            Perth organisations often run lean teams, distributed sites, critical suppliers and cloud-first
+            systems. The right cyber security program has to fit that reality.
+          </p>
+        </div>
+        <ul class="sector-list" aria-label="Industries served">
+          {sectors.map((sector) => <li>{sector}</li>)}
+        </ul>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="section-kicker">Start here</p>
+          <h2 id="contact-title">Start with a cyber systems review.</h2>
+          <p>
+            Start with a focused review of the systems, accounts, data, risks and AI use cases already
+            inside the business. From there, build a staged plan for the security improvements that matter most.
+          </p>
+        </div>
+        <div class="contact-box">
+          <p class="contact-label">Contact</p>
+          <a href={`mailto:${contactEmail}?subject=Cyber%20systems%20review`}>
+            {contactEmail}
+          </a>
+          <a href={`tel:${contactPhoneHref}`}>
+            {contactPhone}
+          </a>
+          <a href={facebookUrl} rel="me noopener noreferrer" target="_blank">
+            Facebook
+          </a>
+          <p>
+            Perth cyber security, AI systems, cloud hardening, identity security and resilience planning.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
