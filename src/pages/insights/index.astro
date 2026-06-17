@@ -1,0 +1,137 @@
+---
+import '../../styles/global.css';
+import { posts } from '../../data/posts';
+import { site } from '../../data/site';
+
+const pageTitle = 'AI Automation Insights Perth | West Coast Cyber Systems';
+const pageDescription =
+  'Practical AI automation, custom systems and workflow simplification insights for small and large businesses in Perth, Western Australia.';
+const pageUrl = `${site.url}/insights/`;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'West Coast Cyber Systems Insights',
+  url: pageUrl,
+  description: pageDescription,
+  publisher: {
+    '@type': 'Organization',
+    name: site.name,
+    url: site.url
+  },
+  blogPost: posts.map((post) => ({
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    url: `${site.url}/insights/${post.slug}/`,
+    datePublished: post.published,
+    dateModified: post.updated
+  }))
+};
+---
+
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={pageUrl} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#071015" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content={`${site.url}${site.fallbackHero}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="/" aria-label="West Coast Cyber Systems home">
+        <span class="brand-mark">WC</span>
+        <span class="brand-text">
+          <span>West Coast</span>
+          <span>Cyber Systems</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/#services">Services</a>
+        <a href="/#approach">Approach</a>
+        <a href="/insights/">Insights</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <a class="header-action" href="/#contact">Start</a>
+    </header>
+
+    <main id="main">
+      <section class="article-hero insight-hero" aria-labelledby="insights-title">
+        <div class="article-hero-media" aria-hidden="true">
+          <img src={site.fallbackHero} alt="" loading="eager" decoding="async" />
+        </div>
+        <div class="motion-grid" aria-hidden="true"></div>
+        <div class="article-hero-inner">
+          <p class="eyebrow">Perth AI automation insights</p>
+          <h1 id="insights-title">Practical ideas for simpler, smarter business systems.</h1>
+          <p>
+            Guides for Perth business owners and operators who want AI integration, automation
+            and custom systems that reduce friction without creating chaos.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="latest-insights">
+        <div class="section-heading">
+          <p class="section-kicker">Latest insights</p>
+          <h2 id="latest-insights">AI automation and custom systems for Perth businesses.</h2>
+          <p>
+            Each article is written to be useful first: clear enough for owners, practical enough for
+            operators, and structured so search engines can understand the services and location.
+          </p>
+        </div>
+        <div class="article-card-grid">
+          {
+            posts.map((post) => (
+              <article class="article-card">
+                <p class="article-meta">
+                  <span>{post.category}</span>
+                  <span>{post.readTime}</span>
+                </p>
+                <h3>
+                  <a href={`/insights/${post.slug}/`}>{post.title}</a>
+                </h3>
+                <p>{post.description}</p>
+                <a class="text-link" href={`/insights/${post.slug}/`}>Read article</a>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="section contact-section" aria-labelledby="insights-contact-title">
+        <div>
+          <p class="section-kicker">Apply this to your business</p>
+          <h2 id="insights-contact-title">Turn the idea into a practical first workflow.</h2>
+          <p>
+            Start with a focused review of the systems, tools and tasks already inside the business,
+            then choose the safest automation opportunities.
+          </p>
+        </div>
+        <div class="contact-box">
+          <p class="contact-label">Contact</p>
+          <a href={`mailto:${site.contactEmail}?subject=AI%20automation%20review`}>
+            {site.contactEmail}
+          </a>
+          <a href={`tel:${site.contactPhoneHref}`}>{site.contactPhone}</a>
+          <a href={site.facebookUrl} rel="me noopener noreferrer" target="_blank">Facebook</a>
+          <p>Perth AI automation, custom systems, cyber-safe workflows and integration planning.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
