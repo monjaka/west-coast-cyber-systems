@@ -3,66 +3,66 @@ import '../styles/global.css';
 import { featuredPosts } from '../data/posts';
 import { site } from '../data/site';
 
-const title = 'West Coast Cyber Systems | Custom Software, AI Integration & Infrastructure Perth';
+const title = 'West Coast Cyber Systems | Small Business Systems, AI Automation & Software Perth';
 const description =
-  'Perth technology consultancy helping Western Australian businesses customise software, integrate AI, deploy systems, improve CMS workflows and build practical infrastructure.';
+  'Perth systems partner helping small businesses organise operations, customise software, automate workflows, integrate AI and build practical management systems.';
 
 const services = [
+  {
+    name: 'Business Management Systems',
+    text: 'Build practical tools for tracking work, customers, files, approvals, follow-ups and day-to-day operations without forcing everything through spreadsheets.'
+  },
+  {
+    name: 'Workflow Automation',
+    text: 'Turn repeated admin into reliable flows across forms, email, documents, spreadsheets, CRMs and job systems so staff can spend more time on useful work.'
+  },
+  {
+    name: 'Software Customisation',
+    text: 'Adapt portals, dashboards, databases and off-the-shelf tools around the way the business actually runs instead of making people work around the software.'
+  },
+  {
+    name: 'AI Integration',
+    text: 'Connect AI into practical workflows for drafting, search, triage, reporting, customer response, document handling and internal knowledge.'
+  },
   {
     name: 'CMS And Website Systems',
     text: 'Set up, customise and improve content management systems so teams can update pages, publish content and manage enquiries without fighting the website.'
   },
   {
-    name: 'Software Customisation',
-    text: 'Adapt existing tools, portals, dashboards and workflows around the way the business actually runs instead of forcing staff through awkward manual processes.'
-  },
-  {
-    name: 'Deployment And Releases',
-    text: 'Move systems from idea to production with clean hosting, version control, testing, DNS, backups and repeatable release processes.'
-  },
-  {
-    name: 'AI Integration',
-    text: 'Connect AI into real business workflows for search, drafting, triage, reporting, customer response and internal knowledge without losing control of the process.'
-  },
-  {
-    name: 'Infrastructure Foundations',
-    text: 'Design and improve the cloud, server, network, identity and storage foundations that business software depends on.'
-  },
-  {
-    name: 'Automation And Integration',
-    text: 'Link forms, email, spreadsheets, databases, CRMs and line-of-business tools so information moves cleanly and repetitive admin drops away.'
+    name: 'Infrastructure And Deployment',
+    text: 'Host, deploy and maintain business systems with clean domains, backups, access, version control and repeatable release processes.'
   }
 ];
 
 const sectors = [
-  'Mining and resources suppliers',
-  'Construction and trades',
+  'Small business operators',
+  'Trades and service businesses',
   'Professional services',
-  'Health and community providers',
-  'Manufacturing and logistics',
-  'Growing technology teams'
+  'Local retailers and online sellers',
+  'Contractors and field teams',
+  'Growing teams moving beyond spreadsheets'
 ];
 
 const process = [
   {
     step: 'See',
     title: 'Understand the business first',
-    text: 'Map the systems, accounts, suppliers, data paths and workflows that matter most.'
+    text: 'Map the work, tools, people, documents and handovers that keep the business moving.'
   },
   {
-    step: 'Fix',
-    title: 'Close the highest-value gaps',
-    text: 'Prioritise identity, cloud, endpoint, backup, network and process controls that reduce real exposure.'
+    step: 'Shape',
+    title: 'Simplify the operating flow',
+    text: 'Find the repeated admin, double handling, missed follow-ups and reporting gaps that are slowing the team down.'
   },
   {
     step: 'Build',
-    title: 'Implement practical security systems',
-    text: 'Put the right protections, workflows and AI-safe automations in place without overcomplicating the business.'
+    title: 'Build useful management systems',
+    text: 'Create practical software, automations and AI-assisted workflows that fit the business instead of adding noise.'
   },
   {
     step: 'Grow',
     title: 'Improve as the business changes',
-    text: 'Review, tune and extend the security program as people, tools, suppliers and AI use cases evolve.'
+    text: 'Tune, extend and document the system as new staff, customers, services and decisions appear.'
   }
 ];
 
@@ -93,12 +93,12 @@ const schema = {
     addressCountry: 'AU'
   },
   serviceType: [
-    'Custom software consulting',
-    'CMS implementation',
+    'Small business systems consulting',
+    'Business management systems',
+    'Workflow automation',
     'Software customisation',
     'AI integration',
-    'System deployment',
-    'Business infrastructure'
+    'CMS implementation'
   ]
 };
 ---
@@ -154,7 +154,7 @@ const schema = {
           <source srcset={site.heroImage} type="image/webp" />
           <img
             src={site.fallbackHero}
-            alt="Perth skyline with secure digital infrastructure and AI network overlays"
+            alt="Perth skyline with connected business systems and AI network overlays"
             loading="eager"
             decoding="async"
             fetchpriority="high"
@@ -192,11 +192,11 @@ const schema = {
           <p class="eyebrow">Perth, Western Australia</p>
           <h1 id="hero-title">West Coast Cyber Systems</h1>
           <p class="hero-copy">
-            AI-assisted cyber security systems for businesses that need secure cloud, trusted identity,
-            clear governance and practical resilience without enterprise theatre.
+            AI-assisted business systems for Perth operators who need clearer workflows,
+            connected tools, practical automation and less admin without enterprise overhead.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button button-primary" href="#contact">Plan a cyber systems review</a>
+            <a class="button button-primary" href="#contact">Plan a systems review</a>
             <a class="button button-secondary" href="#services">Explore services</a>
           </div>
           <dl class="proof-strip" aria-label="Service focus">
@@ -206,11 +206,11 @@ const schema = {
             </div>
             <div>
               <dt>AI</dt>
-              <dd>Secure automation</dd>
+              <dd>Useful automation</dd>
             </div>
             <div>
               <dt>Systems</dt>
-              <dd>Built to operate</dd>
+              <dd>Built to manage</dd>
             </div>
           </dl>
         </div>
@@ -219,17 +219,17 @@ const schema = {
       <section class="intro section-band" aria-labelledby="intro-title">
         <div class="section-grid">
           <div>
-            <p class="section-kicker">Cyber security for operators</p>
-            <h2 id="intro-title">Build security into the way the business actually runs.</h2>
+            <p class="section-kicker">Business systems for operators</p>
+            <h2 id="intro-title">Build systems around the way the business actually runs.</h2>
           </div>
           <div class="intro-copy">
             <p>
-              West Coast Cyber Systems helps Perth businesses move from scattered tools and one-off fixes
-              to cyber systems that can be monitored, improved and explained.
+              West Coast Cyber Systems helps Perth small businesses move from scattered tools,
+              manual admin and one-off workarounds to systems that are easier to manage.
             </p>
             <p>
-              The focus is practical: protect identity, secure cloud platforms, make AI adoption safer,
-              and give leaders a clear path for reducing risk without slowing useful work down.
+              The focus is practical: organise the work, connect the tools, customise the software,
+              and use AI where it can genuinely save time or improve decisions.
             </p>
           </div>
         </div>
@@ -238,10 +238,10 @@ const schema = {
       <section class="section" id="services" aria-labelledby="services-title">
         <div class="section-heading">
           <p class="section-kicker">Services</p>
-          <h2 id="services-title">Custom systems for Perth businesses ready to move faster.</h2>
+          <h2 id="services-title">Small business systems that make daily work easier.</h2>
           <p>
-            Practical software customisation, CMS improvement, deployment, AI integration and
-            infrastructure support for businesses that need their systems to work together.
+            Practical management systems, software customisation, workflow automation, CMS improvement,
+            AI integration and deployment support for businesses ready to outgrow manual workarounds.
           </p>
         </div>
         <div class="service-grid">
@@ -261,8 +261,8 @@ const schema = {
           <p class="section-kicker">Approach</p>
           <h2 id="approach-title">A clear implementation path, not a tool wishlist.</h2>
           <p>
-            Tools matter, but customers need outcomes first: safer access, stronger cloud controls,
-            better resilience and a plan that makes sense to the people running the business.
+            Tools matter, but the outcome matters more: cleaner handovers, better visibility,
+            fewer missed tasks and systems that make sense to the people running the business.
           </p>
         </div>
         <div class="process-list">
@@ -285,8 +285,9 @@ const schema = {
           <p class="section-kicker">Perth focus</p>
           <h2 id="perth-title">Built for Western Australian business conditions.</h2>
           <p>
-            Perth organisations often run lean teams, distributed sites, critical suppliers and cloud-first
-            systems. The right cyber security program has to fit that reality.
+            Perth small businesses often run lean teams, busy owners, field work, suppliers,
+            cloud tools and spreadsheets that have grown past their comfort zone. The right system
+            has to fit that reality.
           </p>
         </div>
         <ul class="sector-list" aria-label="Industries served">
@@ -299,8 +300,8 @@ const schema = {
           <p class="section-kicker">Insights</p>
           <h2 id="insights-title">Practical AI automation ideas for Perth businesses.</h2>
           <p>
-            Guides on simplifying operations, integrating AI safely and building custom systems that
-            help small and large businesses work with less friction.
+            Guides on simplifying operations, integrating AI, improving management workflows and
+            building custom systems that help small businesses work with less friction.
           </p>
         </div>
         <div class="article-card-grid">
@@ -328,15 +329,16 @@ const schema = {
       <section class="section contact-section" id="contact" aria-labelledby="contact-title">
         <div>
           <p class="section-kicker">Start here</p>
-          <h2 id="contact-title">Start with a cyber systems review.</h2>
+          <h2 id="contact-title">Start with a business systems review.</h2>
           <p>
-            Start with a focused review of the systems, accounts, data, risks and AI use cases already
-            inside the business. From there, build a staged plan for the security improvements that matter most.
+            Start with a focused review of the tools, tasks, documents, data and AI opportunities
+            already inside the business. From there, build a staged plan for the systems that will
+            save the most time and make management easier.
           </p>
         </div>
         <div class="contact-box">
           <p class="contact-label">Contact</p>
-          <a href={`mailto:${site.contactEmail}?subject=Cyber%20systems%20review`}>
+          <a href={`mailto:${site.contactEmail}?subject=Business%20systems%20review`}>
             {site.contactEmail}
           </a>
           <a href={`tel:${site.contactPhoneHref}`}>
@@ -346,7 +348,7 @@ const schema = {
             Facebook
           </a>
           <p>
-            Perth cyber security, AI systems, cloud hardening, identity security and resilience planning.
+            Perth business systems, AI automation, software customisation, CMS workflows and practical deployment.
           </p>
         </div>
       </section>
