@@ -31,6 +31,16 @@ Recommended settings:
 
 When the domain is active in Cloudflare, point the Pages custom domain to this project and keep the canonical site URL in `astro.config.mjs`.
 
+For GitHub Pages hosting through Cloudflare DNS, use DNS-only records:
+
+- `A` record for `@` to `185.199.108.153`
+- `A` record for `@` to `185.199.109.153`
+- `A` record for `@` to `185.199.110.153`
+- `A` record for `@` to `185.199.111.153`
+- `CNAME` record for `www` to `monjaka.github.io`
+
+Leave those records DNS-only until GitHub Pages finishes issuing the certificate, then enable HTTPS enforcement in GitHub Pages.
+
 ## GitHub Pages
 
 This repository also includes a GitHub Pages workflow at `.github/workflows/deploy.yml` for an immediate static deployment. The custom domain is stored in `public/CNAME`.
